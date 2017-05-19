@@ -41,10 +41,10 @@ gulp.task("copy", function () {
 		[
 		"src/assets/**/*.css",
 		"src/assets/**/*.js",
-		"src/**/**/*.png",
-		"src/**/**/*.jpg",
-		"src/**/**/*.svg",
-		"src/**/**/*.jpeg",
+		"src/assets/**/*.png",
+		"src/assets/**/*.jpg",
+		"src/assets/**/*.svg",
+		"src/assets/**/*.jpeg",
 	],{
 			base: 'src'
 		})
