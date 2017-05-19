@@ -65,7 +65,7 @@ gulp.task('watch', function () {
 // webServer
 var webServerOptions = {
 	host: '0.0.0.0',
-	port: 8000,
+	port: 7000,
 	open: false,
 	fallback: 'index.html'
 };
