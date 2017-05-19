@@ -1,11 +1,11 @@
-// @include isPC() {
-// 	body {
-// 		background: red;
-// 	}
-// }
-//
-// @include isSP() {
-// 	body {
-// 		background: red;
-// 	}
-// }
+@include isPC() {
+	body {
+		background: red;
+	}
+}
+
+@include isSP() {
+	body {
+		background: red;
+	}
+}

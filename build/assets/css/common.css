@@ -4,3 +4,14 @@
 /*------------------------------------------------------
  Color
 ------------------------------------------------------*/
+@media screen and (min-width: 737px) {
+  body {
+    background: red;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  body {
+    background: red;
+  }
+}
