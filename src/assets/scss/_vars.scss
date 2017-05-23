@@ -1,0 +1,14 @@
+/*------------------------------------------------------
+ Break Point
+------------------------------------------------------*/
+
+@mixin isSP($width:736px) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+@mixin isPC($width:737px) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
