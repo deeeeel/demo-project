@@ -59,6 +59,7 @@ gulp.task("copy:htPass", function() {
 // watch
 gulp.task('watch', function () {
 	gulp.watch(['src/**/*.html', 'src/**/*.ejs'], ['ejs']);
+	gulp.watch(['src/**/css/**/*.css', 'src/**/js/*.js'], ['copy']);
 	gulp.watch(['src/**/*.scss'], ['sass']);
 });
 
