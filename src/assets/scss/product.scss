@@ -1,0 +1,116 @@
+.product-page {
+    background-image: url(/assets/img/product/cola_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    min-width: 970px;
+}
+
+.products-tab-list {
+    font-size: 0;
+    text-align: center;
+    >li {
+        display: inline-block;
+        position: relative;
+        width : 290px;
+        height : 75px;
+        +li {
+            margin-left: 20px;
+        }
+        >a {
+            display: block;
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+.products-list {
+    >li {
+        background-color: rgba(255,255,255,0.7);
+        box-sizing: border-box;
+        width : 910px;
+        padding : 60px 30px 75px 80px;
+        margin : 60px auto 0;
+        >.products-left {
+            float: left;
+            width : 215px;
+        }
+        >.products-right {
+            float: right;
+            width : 515px;
+            >h3 {
+                color : #f6333a;
+                font-size: 22px;
+                font-weight: bold;
+                width : 445px;
+            }
+            >p {
+                width : 445px;
+            }
+            >.products-item-subtitle {
+                font-size: 28px;
+                font-weight: bold;
+                margin-top : 30px;
+            }
+            .products-item-text {
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1.5;
+                margin-top : 25px;
+            }
+            >div {
+                margin-top : 30px;
+            }
+            >.products-lineup {
+                display: inline-block;
+            }
+            >.products-item-btn {
+                width : 235px;
+                height : 50px;
+                >a {
+                    color: #FFFFFF;
+                    display: block;
+                    text-align: center;
+                    text-decoration: none;
+                    line-height: 50px;
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width : 10px;
+                        height : 10px;
+                        border-right : 2px solid #FFFFFF;
+                        border-bottom : 2px solid #FFFFFF;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.products-bgcolor-typeA {
+    background-color: #f6333a;
+}
+.products-bgcolor-typeB {
+    background-color: #333333;
+}
+.products-bgcolor-typeC {
+    background-color: #c3b07a;
+}
+
+
+img {
+    width : 100%;
+}
+
+.cf {
+    &:after {
+        content:'';
+        clear: both;
+        display: block;
+    }
+}
