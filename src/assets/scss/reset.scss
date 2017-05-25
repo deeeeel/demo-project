@@ -49,3 +49,12 @@ table {
 a {
 	text-decoration: none;
 }
+.cf {
+	*zoom: 1;
+}
+.cf:after {
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+}
