@@ -9,11 +9,81 @@
 		<meta property="og:description" content="" />
 		<meta property="og:url" content="">
 		<% include ../_parts/head_links %>
-		<link rel="stylesheet" href="/assets/css/index.css" type="text/css" />
+		<link rel="stylesheet" href="/assets/css/product.css" type="text/css" />
 	</head>
 	<body>
-		<%- include ../_parts/header %>
-		<p>test</p>
-		<% include ../_parts/footer %>
+		<div class="site-wrapper product-page">
+			<% include ../_parts/header %>
+			<main class="site-main">
+				<div class="contents-wrapper">
+					<div class="contens-block">
+						<ul class="products-tab-list">
+							<li class="products-bgcolor-typeA">
+								<a href="#"><img src="/assets/img/product/product_cola.png" alt="コカコーラ オリジナル"></a>
+							</li>
+							<li class="products-bgcolor-typeB">
+								<a href="#"><img src="/assets/img/product/product_caffeine.png" alt="コカコーラ ゼロシュガー"></a>
+							</li>
+							<li class="products-bgcolor-typeC">
+								<a href="#"><img src="/assets/img/product/product_caffeine.png" alt="コカコーラ ゼロカフェイン"></a>
+							</li>
+						</ul>
+					</div>
+					<div class="contents-block">
+						<ul class="products-list">
+							<li class="cf">
+								<div class="products-left">
+									<img src="/assets/img/product/cola_bottle_img.png" alt="コカコーラボトル写真">
+								</div>
+								<div class="products-right">
+									<h3>コカコーラ オリジナル</h3>
+									<p class="products-item-subtitle">ココロとカラダをリフレッシュ</p>
+									<p class="products-item-text">1886年、薬剤師のジョン・S・ベンバートン博士により、
+										米国ジョージア州アトランタで誕生したコカ・コーラ。<br><!--
+										-->今も昔も変わらず、炭酸の刺激と独特の味わいで、のどの渇きを癒すだけでなく、ココロとカラダの両方をリフレッシュし、<br><!--
+										-->前向きな楽しい気分へとスイッチしてくれます。</p>
+									<div class="products-lineup"><img src="/assets/img/product/cola_img.png" alt="製品ラインナップ"></div>
+									<div class="products-item-btn products-bgcolor-typeA"><a href="#">原材料・成分などはこちら</a></div>
+								</div>
+							</li>
+							<li class="cf">
+								<div class="products-left">
+									<img src="/assets/img/product/zero_bottle_img.png" alt="コカコーラゼロボトル写真">
+								</div>
+								<div class="products-right">
+									<h3>コカコーラ ゼロシュガー</h3>
+									<p class="products-item-subtitle">ゴクゴク飲めるゼロシュガー</p>
+									<p class="products-item-text">「コカ・コーラ ゼロシュガー」は、2007年6月の発売以来、<br><!--
+									-->「コカ・コーラ」ならではでの特別なおいしさを、<br><!--
+									-->カロリーゼロ・保存料ゼロ・合成香料ゼロで提供してきました。<br><!--
+									-->強い炭酸感と豊かコークの味わいを楽しめます。</p>
+									<div class="products-lineup"><img src="/assets/img/product/zero_img.png" alt="製品ラインナップ"></div>
+									<div class="products-item-btn products-bgcolor-typeB"><a href="#">原材料・成分などはこちら</a></div>
+								</div>
+							</li>
+							<li class="cf">
+								<div class="products-left">
+									<img src="/assets/img/product/caffeinezero_bottle_img.png" alt="コカコーラシュガーボトル写真">
+								</div>
+								<div class="products-right">
+									<h3>コカコーラ ゼロカフェイン</h3>
+									<p class="products-item-subtitle">夜飲みたいゼロカフェイン</p>
+									<p class="products-item-text">「コカ・コーラ ゼロシュガー」同様、カロリーゼロでありながら<br><!--
+									-->おいしさと炭酸の刺激はそのままに。<br><!--
+									-->さらにカフェインゼロ（＝カフェインフリー）な<br><!--
+									-->「コカコーラ・ゼロカフェイン」。<br><!--
+									-->仕事やレジャーなどから帰宅して自宅でリラックスして過ごす<br><!--
+									-->夜の時間帯でも関係なく、フリーになるひとときを楽しんでもらえます。</p>
+									<div class="products-lineup"><img src="/assets/img/product/caffeinezero_img.png" alt="製品ラインナップ"></div>
+									<div class="products-item-btn products-bgcolor-typeC"><a href="#">原材料・成分などはこちら</a></div>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+			</main>
+			<% include ../_parts/footer %>
+		</div>
 	</body>
 </html>
