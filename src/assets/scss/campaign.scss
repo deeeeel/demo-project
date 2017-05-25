@@ -20,12 +20,12 @@ a:hover,
 a:active,
 a:visited,
 a:link {
-	color: #000000;
+	color: $color-bg-black;
 }
 
 .site-main {
 	padding-top: 60px;
-	background-color: #F2F2F2;
+	background-color: $color-bg-gray;
 }
 
 .contents-wrapper {
@@ -58,8 +58,8 @@ a:link {
 	position: relative;
 	width: 440px;
 	float: left;
-	border: 1px solid #808080;
-	background-color: #FFFFFF;
+	border: 1px solid $color-border-gray;
+	background-color: $color-bg-white;
 }
 
 .campaign-list-box > li::before {
@@ -132,7 +132,7 @@ a:link {
 }
 
 .campaign-list-head-wrap {
-	border-bottom: 1px dotted #808080;
+	border-bottom: 1px dotted $color-border-gray;
 	padding-bottom: 10px;
 	margin-bottom: 15px;
 }
