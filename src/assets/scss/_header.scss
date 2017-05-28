@@ -25,11 +25,22 @@
 			position: absolute;
 			width: calc(100% - 600px);
     		padding: 0 230px 0 370px;
+			background-color: #a80006;
+			@include isSP(){
+				float: none;
+				width: 100%;
+				padding: 0;
+				position: static;
+			}
 			> li {
 				display: table-cell;
 				min-width: 92px;
 				width: 25%;
 				height: 60px;
+				@include isSP(){
+					height: auto;
+					min-width: 0;
+				}
 				> a {
 					display: block;
 					color: #FFFFFF;
@@ -39,6 +50,9 @@
 					text-align: center;
 					padding-top: 20px;
 					padding-bottom: 20px;
+					@include isSP(){
+						font-size: 13px;
+					}
 					&:hover {
 						background-color: #A80006;
 					}
@@ -196,3 +210,46 @@
 		color: #FFFFFF;
 	}
 }
+
+@include isSP(){
+	.header-hamburger-menu-contents {
+		padding-top: 60px;
+		text-align: center;
+		padding-bottom: 10px;
+		border-bottom: 2px solid $color-bg-red;
+		.share-btn-title {
+			font-size: 13px;
+			font-weight: bold;
+			margin-top: 15px;
+		}
+	}
+	.share-btn-list {
+		width: 50%;
+		font-size: 0;
+		margin: 20px auto 0 auto;
+		> li {
+			display: inline-block;
+			width: 20%;
+			padding-left: 10px;
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}
+	.header-hamburger-close-btn {
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: center;
+		margin-top: 20px;
+		> a {
+			display: block;
+			width: 100%;
+			background-color: #d9d9d9;
+			font-size: 12px;
+			font-weight: bold;
+			color: $color-bg-red;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+};
