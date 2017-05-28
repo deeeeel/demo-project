@@ -23,6 +23,36 @@ COLA.COMMON.HEADER_ACCORDION = {
 	}
 };
 
+COLA.COMMON.HEADER_MENU = {
+	init : function(){
+		this.setParameters();
+		this.bindEvent();
+	},
+	setParameters : function(){
+		this.$trigger = $('#jsi-hamburger-trigger');
+		this.$closeTrigger = $('#jsi-hamburger-close-trigger');
+		this.$bar = $('#jsi-hamburger-bar');
+		this.$content = $('#jsi-hamburger-content');
+	},
+	bindEvent : function(){
+		this.$trigger.on('click',$.proxy(this.toggleContent,this));
+		this.$closeTrigger.on('click',$.proxy(this.closeContent,this));
+	},
+	toggleContent : function(){
+		if(this.$content.is(':animated')) return;
+		if(this.$content.is(':visible')){
+			this.$content.slideUp();
+		}else{
+			this.$content.slideDown();
+		}
+	},
+	closeContent : function(){
+		if(this.$content.is(':animated')) return;
+		this.$content.slideUp();
+	}
+};
+
 $(function(){
 	COLA.COMMON.HEADER_ACCORDION.init();
+	COLA.COMMON.HEADER_MENU.init();
 });
