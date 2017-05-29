@@ -4,6 +4,9 @@
 	width: 100%;
 	min-width: 970px;
 	height: 60px;
+	@include isSP(){
+		min-width: 0;
+	}
 	.header-wrapper {
 		position: relative;
 		height: 100%;

@@ -12,6 +12,7 @@
 		.slide-container {
 			font-size: 0;
 			margin-left: -30px;
+			width: 94%;
 			> li {
 				display: inline-block;
 				width: 255px;
@@ -21,11 +22,14 @@
 					color: #333333;
 					img {
 						width: 130px;
+						vertical-align: middle;
 					}
 					.slide-txt {
 						display: inline-block;
 						width: 110px;
 						font-size: 11px;
+						vertical-align: middle;
+						margin-left: 10px;
 					}
 				}
 			}
