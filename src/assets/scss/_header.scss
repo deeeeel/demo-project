@@ -225,6 +225,11 @@
 		text-align: center;
 		padding-bottom: 10px;
 		border-bottom: 2px solid $color-bg-red;
+		background-color: #FFFFFF;
+		.header-hamburger-menu-contents-inner {
+			padding: 30px 15px;
+			position: relative;
+		}
 		.share-btn-title {
 			font-size: 13px;
 			font-weight: bold;
@@ -245,19 +250,27 @@
 		}
 	}
 	.header-hamburger-close-btn {
-		padding-left: 15px;
-		padding-right: 15px;
-		text-align: center;
-		margin-top: 20px;
+		// padding-left: 15px;
+		// padding-right: 15px;
+		// text-align: center;
+		// margin-top: 20px;
+		// TODO(koyama):
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		background-color: #000;
 		> a {
 			display: block;
-			width: 100%;
-			background-color: #d9d9d9;
-			font-size: 12px;
-			font-weight: bold;
-			color: $color-bg-red;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			// width: 100%;
+			// background-color: #d9d9d9;
+			// font-size: 12px;
+			// font-weight: bold;
+			// color: $color-bg-red;
+			// padding-top: 10px;
+			// padding-bottom: 10px;
+
 		}
 	}
 	.header-hamburger-menu-inner.active span:nth-of-type(1) {
