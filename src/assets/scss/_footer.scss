@@ -1,0 +1,38 @@
+.site-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	.footer-wrapper {
+		position: relative;
+		width: 910px;
+		margin: 0 auto;
+		background-color: rgba(255,255,255,0.7);
+	}
+	.footer-slide {
+		.slide-container {
+			font-size: 0;
+			margin-left: -30px;
+			width: 94%;
+			> li {
+				display: inline-block;
+				width: 255px;
+				padding-left: 30px;
+				a {
+					display: block;
+					color: #333333;
+					img {
+						width: 130px;
+						vertical-align: middle;
+					}
+					.slide-txt {
+						display: inline-block;
+						width: 110px;
+						font-size: 11px;
+						vertical-align: middle;
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}

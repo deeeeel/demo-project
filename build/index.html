@@ -8,12 +8,12 @@
 	var isTouchDevice = function() {
 		return ('ontouchstart' in window || navigator.msPointerEnabled) ? true : false;
 	};
-	if(windowWidthã€€>= 737 && isTouchDevice() == false) {
+	if(windowWidth>= 737 && isTouchDevice() == false) {
 		document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
-	} else if(windowWidthã€€>= 737 && isTouchDevice()){
+	} else if(windowWidth>= 737 && isTouchDevice()){
 		document.write('<meta name="viewport" content="width=980">');
 	}
-	else if(windowWidthã€€< 737) {
+	else if(windowWidth< 737) {
 		document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
 	}
 </script>
@@ -27,11 +27,13 @@
 		<meta property="og:site_name" content="[TODO]">
 <meta property="og:type" content="website">
 <meta property="og:image" content="[TODO]">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <link rel="shortcut icon" type="image/vnd.microsoft.ico" href="/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="/favicon.png">
 <link rel="stylesheet" href="/assets/css/reset.css" type="text/css" />
 <link rel="stylesheet" href="/assets/css/common.css" type="text/css" />
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<script type="text/javascript" src="/assets/js/libs/jquery-1.9.1.min.js"></script>
 
 		<link rel="stylesheet" href="/assets/css/top.css" type="text/css" />
 	</head>
@@ -39,22 +41,58 @@
 		<div class="site-wrapper top-page">
 			<header class="site-header">
 	<div class="header-wrapper cf">
-		<h1 class="header-logo"><a href="#"><img src="/assets/img/header_logo.png" alt="CocaCola"></a></h1>
-		<ul class="header-link">
-			<li><a href="#">トップ</a></li>
-			<li><a href="#">製品</a></li>
-			<li><a href="#">CM/動画</a></li>
-			<li><a href="#">キャンペーン</a></li>
-		</ul>
-		<div class="share-btn">
-			<a href="#"><span>SHARE</span></a>
-			<div class="slide-contents">
-				<a href="#"><span>SHARE</span></a>
+		<div class="is-pc">
+			<h1 class="header-logo"><a href="#"><img src="/assets/img/header_logo.png" alt="CocaCola"></a></h1>
+			<ul class="header-link">
+				<li><a href="#">トップ</a></li>
+				<li><a href="#">製品</a></li>
+				<li><a href="#">CM/動画</a></li>
+				<li><a href="#">キャンペーン</a></li>
+			</ul>
+			<div class="share-btn">
+				<a href="#" id="jsi-slide-open-trigger"><span>SHARE</span></a>
+				<div class="slide-contents" id="jsi-header-slide-target">
+					<a href="#" id="jsi-slide-close-trigger"><span>SHARE</span></a>
+					<ul class="share-btn-list">
+						<li><a href="#"><img src="/assets/img/icon_facebook.png" alt="facebook"></a></li>
+						<li><a href="#"><img src="/assets/img/icon_twitter.png" alt="twitter"></a></li>
+						<li><a href="#"><img src="/assets/img/icon_g+.png" alt="google+"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="is-sp">
+			<h1 class="header-logo"><a href="#"><img src="/assets/img/header_logo.png" alt="CocaCola"></a></h1>
+			<div class="header-hamburger-menu" id="jsi-hamburger-trigger">
+				<div class="header-hamburger-menu-inner" id="jsi-hamburger-bar">
+					<span class="hamburger-menu-bar"></span>
+					<span class="hamburger-menu-bar"></span>
+					<span class="hamburger-menu-bar"></span>
+				</div>
+				<span class="hamburger-menu-txt">MENU</span>
+			</div>
+			<div class="header-hamburger-menu-contents" id="jsi-hamburger-content">
+				<div class="header-hamburger-menu-contents-inner">
+					<div class="header-hamburger-close-btn">
+						<a href="#" id="jsi-hamburger-close-trigger"><img src="" alt=""></a>
+					</div>
+				</div>
+				<!-- <ul class="header-link">
+					<li><a href="#">トップ</a></li>
+					<li><a href="#">製品</a></li>
+					<li><a href="#">CM/動画</a></li>
+					<li><a href="#">キャンペーン</a></li>
+				</ul>
+				<p class="share-btn-title">公式アカウント</p>
 				<ul class="share-btn-list">
+					<li><a href="#"><img src="/assets/img/icon_facebook.png" alt="facebook"></a></li>
 					<li><a href="#"><img src="/assets/img/icon_facebook.png" alt="facebook"></a></li>
 					<li><a href="#"><img src="/assets/img/icon_twitter.png" alt="twitter"></a></li>
 					<li><a href="#"><img src="/assets/img/icon_g+.png" alt="google+"></a></li>
-				</ul>
+				</ul> -->
+				<!-- <div class="header-hamburger-close-btn">
+					<a href="#" id="jsi-hamburger-close-trigger">CLOSE</a>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -62,7 +100,8 @@
 
 			<main class="site-main">
 				<div class="contents-wrapper">
-					<section class="section-block section-movie">
+					<img class="main-image" src="/assets/img/main-image.jpg" alt="">
+					<!-- <section class="section-block section-movie">
 						<header class="section-hed">
 							<h2></h2>
 						</header>
@@ -74,11 +113,72 @@
 						よしなに
 					</div>
 
-					<p>test</p>
+					<p>test</p> -->
 				</div>
 			</main>
-			<p>フッター</p>
+			<footer class="site-footer">
+	<div class="footer-wrapper">
+		<div class="footer-slide">
+			<ul class="slide-container">
+				<li>
+					<article>
+						<a href="#">
+							<img src="/assets/img/slide-img01.jpg" alt="">
+							<span class="slide-txt">中高生限定！Coke ONアプリでもっとおトクに！今すぐダウンロード！</span>
+						</a>
+					</article>
+				</li>
+				<li>
+					<article>
+						<a href="#">
+							<img src="/assets/img/slide-img01.jpg" alt="">
+							<span class="slide-txt">中高生限定！Coke ONアプリでもっとおトクに！今すぐダウンロード！</span>
+						</a>
+					</article>
+				</li>
+				<li>
+					<article>
+						<a href="#">
+							<img src="/assets/img/slide-img01.jpg" alt="">
+							<span class="slide-txt">中高生限定！Coke ONアプリでもっとおトクに！今すぐダウンロード！</span>
+						</a>
+					</article>
+				</li>
+				<!-- <li>
+					<article>
+						<a href="#">
+							<img src="/assets/img/slide-img01.jpg" alt="">
+							<span class="slide-txt">中高生限定！Coke ONアプリでもっとおトクに！今すぐダウンロード！</span>
+						</a>
+					</article>
+				</li>
+				<li>
+					<article>
+						<a href="#">
+							<img src="/assets/img/slide-img01.jpg" alt="">
+							<span class="slide-txt">中高生限定！Coke ONアプリでもっとおトクに！今すぐダウンロード！</span>
+						</a>
+					</article>
+				</li>
+				<li>
+					<article>
+						<a href="#">
+							<img src="/assets/img/slide-img01.jpg" alt="">
+							<span class="slide-txt">中高生限定！Coke ONアプリでもっとおトクに！今すぐダウンロード！</span>
+						</a>
+					</article>
+				</li> -->
+			</ul>
+			<div class="more-btn">
+				<a href="#">
+					<span>more</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
 
 		</div>
+		<script language="JavaScript" type="text/javascript" src="/assets/js/function.js" charset="utf-8"></script>
 	</body>
 </html>

@@ -1,21 +1,57 @@
 <header class="site-header">
 	<div class="header-wrapper cf">
-		<h1 class="header-logo"><a href="#"><img src="/assets/img/header_logo.png" alt="CocaCola"></a></h1>
-		<ul class="header-link">
-			<li><a href="#">トップ</a></li>
-			<li><a href="#">製品</a></li>
-			<li><a href="#">CM/動画</a></li>
-			<li><a href="#">キャンペーン</a></li>
-		</ul>
-		<div class="share-btn">
-			<a href="#"><span>SHARE</span></a>
-			<div class="slide-contents">
-				<a href="#"><span>SHARE</span></a>
+		<div class="is-pc">
+			<h1 class="header-logo"><a href="#"><img src="/assets/img/header_logo.png" alt="CocaCola"></a></h1>
+			<ul class="header-link">
+				<li><a href="#">トップ</a></li>
+				<li><a href="#">製品</a></li>
+				<li><a href="#">CM/動画</a></li>
+				<li><a href="#">キャンペーン</a></li>
+			</ul>
+			<div class="share-btn">
+				<a href="#" id="jsi-slide-open-trigger"><span>SHARE</span></a>
+				<div class="slide-contents" id="jsi-header-slide-target">
+					<a href="#" id="jsi-slide-close-trigger"><span>SHARE</span></a>
+					<ul class="share-btn-list">
+						<li><a href="#"><img src="/assets/img/icon_facebook.png" alt="facebook"></a></li>
+						<li><a href="#"><img src="/assets/img/icon_twitter.png" alt="twitter"></a></li>
+						<li><a href="#"><img src="/assets/img/icon_g+.png" alt="google+"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="is-sp">
+			<h1 class="header-logo"><a href="#"><img src="/assets/img/header_logo.png" alt="CocaCola"></a></h1>
+			<div class="header-hamburger-menu" id="jsi-hamburger-trigger">
+				<div class="header-hamburger-menu-inner" id="jsi-hamburger-bar">
+					<span class="hamburger-menu-bar"></span>
+					<span class="hamburger-menu-bar"></span>
+					<span class="hamburger-menu-bar"></span>
+				</div>
+				<span class="hamburger-menu-txt">MENU</span>
+			</div>
+			<div class="header-hamburger-menu-contents" id="jsi-hamburger-content">
+				<div class="header-hamburger-menu-contents-inner">
+					<div class="header-hamburger-close-btn">
+						<a href="#" id="jsi-hamburger-close-trigger"><img src="" alt=""></a>
+					</div>
+				</div>
+				<!-- <ul class="header-link">
+					<li><a href="#">トップ</a></li>
+					<li><a href="#">製品</a></li>
+					<li><a href="#">CM/動画</a></li>
+					<li><a href="#">キャンペーン</a></li>
+				</ul>
+				<p class="share-btn-title">公式アカウント</p>
 				<ul class="share-btn-list">
+					<li><a href="#"><img src="/assets/img/icon_facebook.png" alt="facebook"></a></li>
 					<li><a href="#"><img src="/assets/img/icon_facebook.png" alt="facebook"></a></li>
 					<li><a href="#"><img src="/assets/img/icon_twitter.png" alt="twitter"></a></li>
 					<li><a href="#"><img src="/assets/img/icon_g+.png" alt="google+"></a></li>
-				</ul>
+				</ul> -->
+				<!-- <div class="header-hamburger-close-btn">
+					<a href="#" id="jsi-hamburger-close-trigger">CLOSE</a>
+				</div> -->
 			</div>
 		</div>
 	</div>
